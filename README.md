@@ -24,6 +24,9 @@ Extracts mortgage-related data from online platforms, handling structured listin
 ### 3. scrape_snowplows
 Collects snowplow equipment listings and marketplace data, including item details and pricing information.
 
+### 4. scrape_training_peaks
+Collects coaches listings from trainingpeaks including item details and contact information.
+
 ## 🛠 Technology Stack
 
 - Python
