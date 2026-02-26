@@ -48,6 +48,7 @@ In the Chrome window that just opened, navigate to the [Martindale]() search res
 ### 3. Run the Script
 
 ```bash
+chrome.exe --remote-debugging-port=9222 --user-data-dir="C:\selenum\ChromeProfile"
 python scrape_auto_injury_attorney.py
 
 ```
