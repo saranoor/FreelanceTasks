@@ -2,6 +2,9 @@
 
 A Python-based automation tool designed to extract non-sponsored attorney listings from Martindale-Hubbell. It focuses on gathering contact details for specialized legal professionals (e.g., Automobile Accident attorneys) across multiple search result pages.
 
+## Demo
+https://github.com/user-attachments/assets/36d9cbc6-3d73-41cd-86d7-114887863e72
+
 ## 🛡️ Anti-Bot Bypass Strategy
 
 Unlike traditional scrapers that get blocked by Cloudflare or PerimiterX, this script uses the **"Remote Debugging"** method.
