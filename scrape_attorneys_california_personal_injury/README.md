@@ -31,6 +31,9 @@ You **must** start Chrome via the command line with a debugging port open before
 
 ```cmd
 chrome.exe --remote-debugging-port=9222 --user-data-dir="C:\sel_temp"
+or
+chrome.exe --remote-debugging-port=9222 --user-data-dir="C:\selenum\ChromeProfile"
+
 
 ```
 
@@ -48,7 +51,6 @@ In the Chrome window that just opened, navigate to the [Martindale]() search res
 ### 3. Run the Script
 
 ```bash
-chrome.exe --remote-debugging-port=9222 --user-data-dir="C:\selenum\ChromeProfile"
 python scrape_auto_injury_attorney.py
 
 ```

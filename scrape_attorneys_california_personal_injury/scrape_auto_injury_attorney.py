@@ -12,7 +12,7 @@ chrome_options = Options()
 chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 
 driver = webdriver.Chrome(options=chrome_options)
-driver.maximize_window()
+# driver.maximize_window()
 url = "https://www.martindale.com/search/attorneys/?term=Automobile%20Accidents%20near%20Los%20Angeles%2C%20CA&params=eyJ0eXBlIjoicGVvcGxlIiwidGVybSI6IkF1dG9tb2JpbGUgQWNjaWRlbnRzIG5lYXIgTG9zIEFuZ2VsZXMsIENBIiwicGFnZVRpdGxlIjoibDpMb3MgQW5nZWxlcywgQ0F8YTpBdXRvbW9iaWxlIEFjY2lkZW50cyIsImluaXRpYWxVcmwiOnsiZ2VvTG9jYXRpb25GYWNldCI6WyJMb3MgQW5nZWxlcywgQ0EiXSwic2VhcmNoU2VlZCI6IjE3MDU3NzUzNTIiLCJrZXl3b3JkIjoiIiwicHJhY3RpY2VBcmVhcyI6WyJBdXRvbW9iaWxlIEFjY2lkZW50cyJdfSwicHJhY3RpY2VBcmVhcyI6WyJBdXRvbW9iaWxlIEFjY2lkZW50cyIsIlBlcnNvbmFsIEluanVyeSJdLCJwcmFjdGljZUFyZWFzUmVjZW50cyI6WyJBdXRvbW9iaWxlIEFjY2lkZW50cyJdLCJnZW9Mb2NhdGlvbkZhY2V0IjpbIkxvcyBBbmdlbGVzLCBDQSIsIlNhbiBGcmFuY2lzY28sIENBIl0sImdlb0xvY2F0aW9uRmFjZXRSZWNlbnRzIjpbIkxvcyBBbmdlbGVzLCBDQSJdLCJwYWdlIjoxLCJsaW1pdCI6MzAsIm9mZnNldCI6MCwic29ydCI6IiIsInNvcnRUeXBlIjoiIiwiY2xlYXJQYXJhbXMiOmZhbHNlLCJrZXl3b3JkIjoiIn0="
 driver.get(url)
 
@@ -21,11 +21,11 @@ file_name = "attorneys_results.xlsx"
 while True:
     page_data = []  # Reset for each page
     print(f"Scraping current page...")
-    time.sleep(10)  # Wait for page to load, adjust as needed
+    time.sleep(3)  # Wait for page to load, adjust as needed
     cards = driver.find_elements(By.CSS_SELECTOR, "div.card")
     print(f"Found {len(cards)} cards on this page.")
-    for card in cards:
-        print("Processing a card...")
+    for i, card in enumerate(cards):
+        print(f"Processing attorney nummber {i} on this page...")
         try:
             if len(card.find_elements(By.CSS_SELECTOR, ".sponsored-label")) > 0:
                 continue
